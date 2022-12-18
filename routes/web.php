@@ -38,4 +38,6 @@ route::get('/view_product',[AdminController::class,'view_product']);
 
 route::post('/add_product',[AdminController::class,'add_product']);
 
+route::get('/show_product',[AdminController::class,'show_product']);
+
 

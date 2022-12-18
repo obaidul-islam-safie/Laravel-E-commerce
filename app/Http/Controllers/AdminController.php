@@ -56,7 +56,15 @@ class AdminController extends Controller
         $product->image = $imagename;
 
 
-        $data->save();
+        $product->save();
         return redirect()->back()->with('message','Catagory Added Successfully');
+    }
+
+
+    public function show_product(){
+
+        $product = product::all();
+
+        return view('admin.show_product',compact('product'));
     }
 }
