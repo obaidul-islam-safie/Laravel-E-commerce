@@ -61,7 +61,7 @@
 
                 <table class="center">
 
-                    <tr>
+                    <tr class="bg-primary">
                         <td>Catagory Name</td>
                         <td>Action</td>
                     </tr>
