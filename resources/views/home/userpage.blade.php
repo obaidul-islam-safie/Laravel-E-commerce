@@ -18,7 +18,7 @@
       <link href="home/css/font-awesome.min.css" rel="stylesheet" />
       <!-- Custom home/styles for this template -->
       <link href="home/css/style.css" rel="stylesheet" />
-      <!-- responshome/ive style -->
+      <!-- responshome/ive style --> 
       <link href="home/css/responsive.css" rel="stylesheet" />
    </head>
    <body>
