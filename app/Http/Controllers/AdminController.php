@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Catagory;
 use App\Models\Product;
 use File;
+use App\Models\Order;
 
 
 class AdminController extends Controller
@@ -119,5 +120,11 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message','Catagory Added Successfully');
 
+    }
+
+    public function order(){
+
+        $order=order::all();
+        return view('admin.order',compact('order'));
     }
 }
