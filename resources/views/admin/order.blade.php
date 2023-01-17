@@ -21,7 +21,7 @@
         }
 
         .image{
-            width: 200px;
+            width: 100px;
             height: 100px;
         }
 
@@ -55,6 +55,7 @@
                         <th>Payment Status</th>
                         <th>Delivery Stutas</th>
                         <th>Image</th>
+                        <th>Delivered</th>
                         
 
                     </tr>
@@ -74,6 +75,16 @@
                         <td>
 
                             <img class="image" src="/product/{{$order->image}}" alt="">
+                        </td>
+
+                        <td>
+                            @if($order->delivery_status=='processing')
+
+                            <a href="{{url('delivered',$order->id)}}" onclick="return confirm('Are you sure this product is delivered !!!')" class="btn btn-primary">Delivered</a>
+                       
+                            @else
+                            <p style="color:green">Delivered</p>
+                            @endif
                         </td>
 
                     </tr>
