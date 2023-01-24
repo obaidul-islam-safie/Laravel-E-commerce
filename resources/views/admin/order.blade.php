@@ -57,6 +57,7 @@
                         <th>Image</th>
                         <th>Delivered</th>
                         <th>Print PDF</th>
+                        <th>Send Email</th>
                         
 
                     </tr>
@@ -90,6 +91,10 @@
 
                         <td>
                             <a href="{{url('print_pdf',$order->id)}}" class="btn btn-secondary">Print PDF</a>
+                        </td>
+
+                        <td>
+                            <a href="{{url('send_email',$order->id)}}" class="btn btn-info">Send mail</a>
                         </td>
 
                     </tr>
