@@ -181,4 +181,14 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+
+
+    public function searchdata(Request $request){
+
+        $searchText=$request->search;
+        $order=order::where('name','LIKE',"%$searchText%")->orWhere('phone','LIKE',"%$searchText%")->get();
+
+        return view('admin.order',compact('order'));
+
+    }
 }
