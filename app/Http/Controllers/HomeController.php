@@ -10,6 +10,8 @@ use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
 
+use RealRashid\SweetAlert\Facades\Alert;
+
 use Session;
 use Stripe;
 
@@ -98,7 +100,10 @@ class HomeController extends Controller
             }
 
             $cart->save();
-            return redirect()->back()->with('message','Product added Successfully');
+
+            Alert::success('Product Added Successfully','We have addeed product to the cart');
+
+            return redirect()->back();
 
         }else{
 
